@@ -9,18 +9,20 @@
   <body class="catalog">
     <header class="main-header">
       <div class="container">
-        <nav>
-          <a class="logo-container" href="index.html">
-            <img src="img/icons/nerds-logo.svg" alt="Логотип Нёрдс" width="160" height="65">
-          </a>
-          <ul class="site-navigation">
-            <li class="site-navigation-item"><a href="#">Студия</a></li>
-            <li class="site-navigation-item"><a href="#">Клиенты</a></li>
-            <li class="site-navigation-item"><a class="current" href="catalog.html">Магазин</a></li>
-            <li class="site-navigation-item"><a href="#">Контакты</a></li>
-            <li class="site-navigation-item"><a href="#">Корзина</a></li>
-          </ul>
-        </nav>
+          <nav>
+            <a class="logo-container" href="index.html">
+              <img src="img/icons/nerds-logo.svg" alt="Логотип Нёрдс" width="160" height="65">
+            </a>
+            <ul class="site-navigation">
+              <li class="site-navigation-item"><a href="studio.html">Студия</a></li>
+              <li class="site-navigation-item"><a href="clients.html">Клиенты</a></li>
+              <li class="site-navigation-item"><a class="current" href="catalog.html">Магазин</a></li>
+              <li class="site-navigation-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <ul class="user-navigation">
+              <li class="user-navigation-item"><a href="cart.html">Корзина</a></li>
+            </ul>
+            </nav>
         <div class="title">
           <h1>Магазин готовых шаблонов</h1>
         </div>
@@ -88,7 +90,7 @@
               <img class="catalog-item-image" src="img/content/img-sedona.png" alt="Sedona" width="360" height="576">
             </a>
             <div class="hidden info">
-              <h2><a href="">Sedona</a></h2>
+              <h2 class="project-name"><a href="">Sedona</a></h2>
               <b>Информационный  сайт для туристов</b>
               <a class="button" href="">9900 Руб.</a>
             </div>
@@ -98,7 +100,7 @@
               <img class="catalog-item-image" src="img/content/img-pink.png" alt="Pink app" width="360" height="576">
             </a>
               <div class="hidden info">
-              <h2><a href="">Pink app</a></h2>
+              <h2 class="project-name"><a href="">Pink app</a></h2>
               <b>Продуктовый лендинг приложения для iOS и Android</b>
               <a class="button" href="">9900 Руб.</a>
             </div>
@@ -108,7 +110,7 @@
               <img class="catalog-item-image" src="img/content/img-barbershop.png" alt="Barbershop Borodinskiy" width="360" height="576">
             </a>
               <div class="hidden info">
-              <h2><a href="">Barbershop</a></h2>
+              <h2 class="project-name"><a href="">Barbershop</a></h2>
               <b>Сайт салона красоты.Для мужчин, да.</b>
               <a class="button" href="">9900 Руб.</a>
             </div>
@@ -118,7 +120,7 @@
               <img class="catalog-item-image" src="img/content/img-mishka.png" alt="Mishka" width="360" height="576">
             </a>
             <div class="hidden info">
-              <h2><a href="">Mishka</a></h2>
+              <h2 class="project-name"><a href="">Mishka</a></h2>
               <b>Интернет-магазин вязаных игрушек</b>
               <a class="button" href="">9900 Руб.</a>
             </div>
@@ -128,7 +130,7 @@
               <img class="catalog-item-image" src="img/content/img-aplus.png" alt="A Plus" width="360" height="576">
             </a>
             <div class="hidden info">
-              <h2><a href="">A Plus</a></h2>
+              <h2 class="project-name"><a href="">A Plus</a></h2>
               <b>Лендинг курсов повышения квалификации</b>
               <a class="button" href="">9900 Руб.</a>
             </div>
@@ -138,14 +140,14 @@
               <img class="catalog-item-image" src="img/content/img-kvast.png" alt="Kvast" width="360" height="576">
             </a>
             <div class="hidden info">
-              <h2><a href="">Кваст</a></h2>
+              <h2 class="project-name"><a href="">Кваст</a></h2>
               <b>Промо-сайт производителя крафтового кваса</b>
               <a class="button" href="">9900 Руб.</a>
             </div>
           </li>
         </ul>
         <ul class="pagination">
-            <li class="pagination-item current">1</li>
+            <li class="pagination-item current"><a href="">1</a></li>
             <li class="pagination-item"><a href="">2</a></li>
             <li class="pagination-item"><a href="">3</a></li>
             <li class="pagination-item"><a href="">Cледующая</a></li>
@@ -163,7 +165,6 @@
           <p>тел. +7 (812) 275-75-75</p>
           <a class="button open-popup" href="#">Напишите нам</a>
         </div>
-        <!-- <img class="geotag" src="img/content/map-marker.png" width="231" height="190"> -->
       </div>
 
       <div class="social-container">
@@ -205,6 +206,7 @@
         <button class="button" type="submit">Отправить</button>
       </form>
     </div>
+    <script src="js/script.js"></script>
   </body>
-  <script src="js/script.js"></script>
+
 </html>
