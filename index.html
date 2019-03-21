@@ -2,9 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Нёрдс</title>
+    <title>HTML Academy: Нёрдс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="../844063-nerds-24/css/styles.css">
+    <link href="../844063-nerds-24/css/styles.css" rel="stylesheet">
   </head>
   <body class="index">
     <header class="main-header">
@@ -14,26 +14,34 @@
             <img src="img/icons/nerds-logo.svg" alt="Логотип Нёрдс" width="160" height="65">
           </a>
           <ul class="site-navigation">
-            <li class="site-navigation-item"><a class="current" href="studio.html">Студия</a></li>
-            <li class="site-navigation-item"><a href="clients.html">Клиенты</a></li>
-            <li class="site-navigation-item"><a href="catalog.html">Магазин</a></li>
-            <li class="site-navigation-item"><a href="contacts.html">Контакты</a></li>
+            <li class="site-navigation-item">
+              <a class="current" href="studio.html">Студия</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="clients.html">Клиенты</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="catalog.html">Магазин</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="contacts.html">Контакты</a>
+            </li>
           </ul>
           <ul class="user-navigation">
-            <li class="user-navigation-item"><a href="cart.html">Корзина</a></li>
+            <li class="user-navigation-item">
+              <a href="cart.html">Корзина</a>
+            </li>
           </ul>
         </nav>
         <section class="main-slider">
           <input type="radio" name="slider" id="slide-1" checked>
           <input type="radio" name="slider" id="slide-2">
           <input type="radio" name="slider" id="slide-3">
-
           <div class="slider-navigation">
             <label for="slide-1" class="slider-navigation-item"></label>
             <label for="slide-2" class="slider-navigation-item"></label>
             <label for="slide-3" class="slider-navigation-item"></label>
           </div>
-
           <ul class="slider-list">
             <li class="slider-item first">
               <div class="item-info">
@@ -65,19 +73,19 @@
         <h2 class="visually-hidden">Каталог услуг</h2>
         <ul class="category-list">
           <li class="category-item cat-first">
-            <img src="./img/content/illustration-1.png" width="300" height="145" alt="Категория: Веб-сайты">
+            <img src="img/content/illustration-1.jpg" width="300" height="145" alt="Категория: Веб-сайты">
             <h3>Веб-сайты</h3>
             <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
             <a class="button" href="to-cart.html">Заказать</a>
           </li>
           <li class="category-item cat-second">
-            <img src="./img/content/illustration-2.png" width="300" height="145" alt="Категория: Веб-приложения">
+            <img src="img/content/illustration-2.jpg" width="300" height="145" alt="Категория: Веб-приложения">
             <h3>Приложения</h3>
             <p>Покорите топ-10 приложений в AppStore и Google Play</p>
             <a class="button" href="to-cart.html">Заказать</a>
           </li>
           <li class="category-item cat-third">
-            <img src="./img/content/illustration-3.png" width="300" height="145" alt="Категория: Веб-презентации">
+            <img src="img/content/illustration-3.jpg" width="300" height="145" alt="Категория: Веб-презентации">
             <h3>Презентации</h3>
             <p>Вы даже не подозреваете, насколько вы изумительны!</p>
             <a class="button" href="to-cart.html">Заказать</a>
@@ -120,22 +128,22 @@
           <ul class="clients-list">
             <li class="clients-item">
               <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank">HTML academy
-                <img src="img/content/logo-1.png" alt="HTML academy" width="199" height="68">
+                <img src="img/content/logo-1.jpg" alt="HTML academy" width="199" height="68">
               </a>
             </li>
             <li class="clients-item">
-              <a href="http://barbershop-borodinski.webflow.io/"> Барбершоп "Бородинский"
-                <img src="img/content/logo-2.png" alt="Барбершоп Бородинский" width="209" height="90">
+              <a href="barbershop-borodinsky.html"> Барбершоп "Бородинский"
+                <img src="img/content/logo-2.jpg" alt="Барбершоп Бородинский" width="209" height="90">
               </a>
             </li>
             <li class="clients-item">
               <a href="pink-shop.html">Pink
-                <img src="img/content/logo-3.png" alt="Pink" width="185" height="52">
+                <img src="img/content/logo-3.jpg" alt="Pink" width="185" height="52">
               </a>
             </li>
             <li class="clients-item">
               <a href="mishka-store.html">Mishka
-                <img src="img/content/logo-4.png" alt="Mishka" width="173" height="84">
+                <img src="img/content/logo-4.jpg" alt="Mishka" width="173" height="84">
               </a>
             </li>
           </ul>
@@ -158,17 +166,14 @@
       <div class="social-container">
         <ul class="footer-social">
           <li class="footer-social-item vkontakte">
-            <a href="nerds-vk.ru">
-            </a>
+            <a href="nerds-vk.ru" aria-label="Группа Nerds во Вконтакте"></a>
           </li>
           <li class="footer-social-item facebook">
-            <a href="nefds-fb.com">
-            </a>
+            <a href="nefds-fb.com" aria-label="Сообщество Nerds в Facebook"></a>
           </li>
           <li class="footer-social-item instagram">
-            <a href="nerds-insta.com">
-          </a>
-        </li>
+            <a href="nerds-insta.com" aria-label="Страница Nerds в Instagram"></a>
+          </li>
         </ul>
         <p class="footer-slogan">
           <b>Давайте дружить, это выгодно!</b>
@@ -177,7 +182,7 @@
       </div>
     </footer>
     <div class="modal">
-      <button class="close" aria-label="Закрыть окно"></button>
+      <button class="close" type="button" aria-label="Закрыть окно">Закрыть</button>
       <form action="https://echo.htmlacademy.ru" method="get">
         <h2>Напишите нам</h2>
         <div class="user-info">

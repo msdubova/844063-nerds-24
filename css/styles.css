@@ -1,6 +1,6 @@
 @font-face {
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   font-family: "Roboto";
 
   src: local("Roboto"),
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-style: bold;
+  font-style: normal;
   font-weight: 700;
   font-family: "Roboto";
 
@@ -19,8 +19,8 @@
 }
 
 @font-face {
-  font-style: lighter;
-  font-weight: 100;
+  font-style: normal;
+  font-weight: 400;
   font-family: "Roboto";
 
   src: local("Roboto"),
@@ -28,6 +28,41 @@
   url("../fonts/roboto.woff") format("woff");
 }
 
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -400%);
+  }
+
+  90% {
+    transform: translate(-50%, -10%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-45%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-55%, -50%);
+  }
+}
 
 body {
   margin: 0;
@@ -37,7 +72,7 @@ body {
   font-size: 16px;
   line-height: 30px;
   font-family: "Roboto", "Arial", sans-serif;
-  color: rgba(0, 0, 0);
+  color: rgb(0, 0, 0);
   letter-spacing: 0;
 }
 
@@ -99,13 +134,12 @@ a {
 .main-header {
   padding-top: 50px;
 
-  background-color: #eeeeee;
+  background-color: rgb(238, 238, 238);
 }
 
 .index.main-header {
   margin-bottom: 80px;
 }
-
 
 .main-header nav {
   display: flex;
@@ -169,6 +203,7 @@ a {
   display: inline-block;
   padding: 10px 0;
 
+  font-weight: 500;
   font-size: 16px;
   line-height: 30px;
   vertical-align: middle;
@@ -176,7 +211,6 @@ a {
   color: rgb(0, 0, 0);
   text-transform: uppercase;
 }
-
 
 .site-navigation-item a:hover,
 .site-navigation-item a:focus,
@@ -212,6 +246,7 @@ a {
 
   text-align: right;
 }
+
 .user-navigation-item:last-child a:before {
   content: "";
   position: absolute;
@@ -227,7 +262,6 @@ a {
   opacity: 0.5;
 }
 
-
 .main-slider {
   position: relative;
 
@@ -236,7 +270,6 @@ a {
 }
 
 .main-slider input {
-  position: absolute;
   position: absolute;
 
   width: 1px;
@@ -279,8 +312,8 @@ a {
 .main-slider input#slide-3:checked ~ div label[for="slide-3"]::before {
   content: "";
   position: relative;
-  top: -35%;
-  left: 25%;
+  top: -50%;
+  left: 50%;
 
   display: inline-block;
   width: 25%;
@@ -290,6 +323,7 @@ a {
 
   border: 2px solid rgb(194, 194, 194);
   border-radius: 50%;
+  transform: translate(-50%, 25%);
 }
 
 .main-slider input#slide-1:focus ~ div label[for="slide-1"],
@@ -327,14 +361,8 @@ a {
   padding: 0;
 }
 
-.main-slider input#slide-1:checked ~ .slider-list .first {
-  display: block;
-}
-
-.main-slider input#slide-2:checked ~ .slider-list .second {
-  display: block;
-}
-
+.main-slider input#slide-1:checked ~ .slider-list .first,
+.main-slider input#slide-2:checked ~ .slider-list .second,
 .main-slider input#slide-3:checked ~ .slider-list .third {
   display: block;
 }
@@ -449,9 +477,7 @@ a {
 .category-item p {
   max-width: 260px;
   margin: 0;
-  margin: 0;
   margin-bottom: 32px;
-  padding: 0;
   padding: 0;
 
   line-height: 24px;
@@ -507,7 +533,7 @@ a {
   margin: 0 auto;
   padding: 0;
 
-  border-top: 2px solid #eeeeee;
+  border-top: 2px solid rgb(238, 238, 238);
 }
 
 .column-left {
@@ -593,7 +619,7 @@ a {
 .about-us caption {
   margin: 0;
   padding: 0;
-  padding-bottom: 45px;
+  padding-bottom: 55px;
 
   font-weight: 700;
   text-transform: uppercase;
@@ -615,7 +641,7 @@ a {
   margin: 0;
   padding: 0;
 
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
 }
@@ -633,8 +659,8 @@ a {
   margin: 0 auto;
   padding: 0;
 
-  border-top: 2px solid #eeeeee;
-  border-bottom: 2px solid #eeeeee;
+  border-top: 2px solid rgb(238, 238, 238);
+  border-bottom: 2px solid rgb(238, 238, 238);
 }
 
 .clients-list {
@@ -655,12 +681,11 @@ a {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 280px;
   width: 300px;
-  padding-top: 15px;;
+  padding-top: 15px;
 }
 
-.clients-item a{
+.clients-item a {
   opacity: 0.2;
 }
 
@@ -696,14 +721,13 @@ a {
   width: 2px;
   height: 52px;
 
-  background-color: #eeeeee;
+  background-color: rgb(238, 238, 238);
   transform: translateY(-50%);
 }
 
 .clients-item a {
   font-size: 0;
 }
-
 
 .main-footer .container {
   position: relative;
@@ -716,10 +740,13 @@ a {
   margin-bottom: 68px;
   padding: 0;
 
-  background-image: url("/img/content/Прямоугольник\ 1.jpg");
+  background-color: rgb(233, 229, 220);
+  background-image: url("../img/content/map.jpg");
 }
 
 .main-footer iframe {
+  z-index: 1;
+
   width: 100%;
   height: 416px;
 
@@ -751,7 +778,7 @@ a {
   margin-bottom: 20px;
   padding: 0;
 
-  font-weight: 100;
+  font-weight: 400;
   line-height: 18px;
 }
 
@@ -788,13 +815,21 @@ a {
 }
 
 .footer-social-item {
-  position: relative;
-
   width: 79px;
   height: 79px;
   margin-bottom: 10px;
 
   background-color: rgb(225, 225, 225);
+  border-radius: 50%;
+}
+
+.footer-social-item a {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
   border-radius: 50%;
 }
 
@@ -804,20 +839,16 @@ a {
 }
 
 .footer-social-item a:active {
-  color: rgba (255, 255, 255, 0.3);
-
   background-color: rgb(215, 55, 59);
 }
 
-.footer-social-item a {
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  border-radius: 50%;
+.vkontakte a:active::after,
+.facebook a:active::after,
+.instagram a:active::after {
+  opacity: 0.3;
 }
 
-.footer-social .vkontakte::after {
+ .vkontakte a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -831,7 +862,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.footer-social .facebook::after {
+.facebook a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -845,7 +876,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.footer-social .instagram::after {
+.instagram a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -876,6 +907,7 @@ a {
   margin-bottom: 7px;
   padding-top: 7px;
 
+  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
 }
@@ -890,7 +922,7 @@ a {
   padding: 0;
   padding-top: 78px;
 
-  font-weight: 300;
+  font-weight: 500;
   font-size: 55px;
   line-height: 55px;
   text-align: center;
@@ -944,7 +976,7 @@ fieldset legend {
   margin-bottom: 15px;
   padding: 0;
 
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
@@ -957,7 +989,7 @@ fieldset label {
   margin-bottom: 10px;
   padding-left: 35px;
 
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .range-filter {
@@ -974,21 +1006,21 @@ fieldset label {
   padding-right: 20px;
   padding-left: 20px;
 
-  background-color: #f1f1f1;
+  background-color: rgb(241, 241, 241);
   border-radius: 5px;
 }
 
 .range-controls .scale {
   height: 2px;
 
-  background: #d7dcde;
+  background: rgb(215, 220, 222);
 }
 
 .range-controls .bar {
   width: 70%;
   height: 2px;
 
-  background: #00ca74;
+  background: rgb(0, 202, 116);
 }
 
 .range-controls .toggle {
@@ -1000,10 +1032,10 @@ fieldset label {
   height: 4px;
   padding: 0;
 
-  background-color: #ababab;
-  border: 8px solid #ffffff;
+  background-color: rgb(171, 171, 171);
+  border: 8px solid rgb(255, 255, 255);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 rgb(207, 207, 207);
   cursor: pointer;
 }
 
@@ -1038,9 +1070,9 @@ fieldset label {
   font-size: 16px;
   font-family: "Roboto", "Arial", sans-serif;
   text-align: center;
-  color: #283136;
+  color: rgb(40, 49, 54);
 
-  background: #f1f1f1;
+  background: rgb(241, 241, 241);
   border: none;
   border-radius: 5px;
 }
@@ -1059,7 +1091,7 @@ fieldset label {
   width: 18px;
   height: 18px;
 
-  border: 3px solid #4d4d4d;
+  border: 3px solid rgb(77, 77, 77);
   border-radius: 50%;
   transform: translateY(-50%);
   opacity: 0.5;
@@ -1074,7 +1106,7 @@ fieldset label {
   width: 8px;
   height: 8px;
 
-  background-color: #4d4d4d;
+  background-color: rgb(77, 77, 77);
   border-radius: 50%;
   transform: translateY(-50%);
   opacity: 0.5;
@@ -1142,13 +1174,13 @@ aside .button {
 
 aside .button:hover,
 aside .button:focus {
-  background-color: #dfdfdf;
+  background-color: rgb(223, 223, 223);
 }
 
 aside .button:active {
   color: rgba(0, 0, 0, 0.3);
 
-  background-color: #d5d5d5;
+  background-color: rgb(213, 213, 213);
   box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -1176,12 +1208,12 @@ aside .button:active {
   padding: 0;
 }
 
-.sortings h2 {
+.sortings h3 {
   margin: 0;
   margin-right: auto;
   padding: 0;
 
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
@@ -1191,7 +1223,7 @@ aside .button:active {
 .sortings a {
   display: inline-block;
 
-  font-weight: 100;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   vertical-align: middle;
@@ -1296,8 +1328,7 @@ aside .button:active {
   max-height: 575px;
   padding-bottom: 40px;
 
-  background-color: #eeeeee;
-  background-color: #eeeeee;
+  background-color: rgb(238, 238, 238);
 }
 
 .catalog-item:before {
@@ -1313,20 +1344,20 @@ aside .button:active {
   opacity: 0.12;
 }
 
-.catalog-item h2 {
+.catalog-item h3 {
   margin: 0;
   margin-bottom: 18px;
   padding: 0;
   padding-top: 30px;
 
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.001em;
 }
 
-.project-name a  {
+.project-name a {
   color: rgb(0, 0, 0);
 }
 
@@ -1337,7 +1368,7 @@ aside .button:active {
   margin-bottom: 5px;
   overflow: auto;
 
-  font-weight: 100;
+  font-weight: 400;
   line-height: 18px;
   text-align: center;
 }
@@ -1372,10 +1403,17 @@ aside .button:active {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .pagination a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
   color: rgb(0, 0, 0);
   text-transform: uppercase;
 }
@@ -1390,9 +1428,9 @@ aside .button:active {
   margin: 0;
   margin-right: 10px;
   margin-bottom: 20px;
-  padding: 0 10px;
+  padding: 0;
 
-  background-color: #eeeeee;
+  background-color: rgb(238, 238, 238);
   border-radius: 5px;
 }
 
@@ -1405,57 +1443,21 @@ aside .button:active {
   box-sizing: border-box;
 
   background-color: transparent;
-  border: 3px solid #eeeeee;
+  border: 3px solid rgb(238, 238, 238);
 }
 
 .pagination-item:hover,
 .pagination-item:focus-within {
-  background-color: #dfdfdf;
+  background-color: rgb(223, 223, 223);
 }
 
 .pagination-item:active {
-  background-color: #d5d5d5;
+  background-color: rgb(213, 213, 213);
   box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .pagination-item:active a {
   color: rgba(0, 0, 0, 0.3);
-}
-
-@keyframes bounce {
-  0% {
-    transform: translate(-50%, -400%);
-  }
-
-  90% {
-    transform: translate(-50%, -10%);
-  }
-
-  100% {
-    transform: translate(-50%, -50%);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translate(-50%, -50%);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translate(-45%, -50%);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translate(-55%, -50%);
-  }
 }
 
 .modal {
@@ -1490,16 +1492,31 @@ aside .button:active {
 
 .modal .close {
   position: absolute;
-  top: 90px;
+  top: 80px;
   right: 90px;
 
   width: 21px;
   height: 21px;
 
+  font-size: 0;
+
   background: none;
   background-image: url("../img/icons/close-cross.svg");
   border: none;
   opacity: 0.5;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  opacity: 1;
+}
+
+.modal .close:active {
+  opacity: 0.1;
+}
+
+.modal button {
+  border: none;
 }
 
 .modal form {
@@ -1543,11 +1560,12 @@ aside .button:active {
   padding: 0;
   padding: 14px;
 
-  font-weight: 100;
+  font-weight: 400;
 
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 3px;
 }
+
 .modal label {
   margin: 0;
   margin-bottom: 5px;
@@ -1575,4 +1593,3 @@ label[for="letter"] {
 .modal .button {
   width: 260px;
 }
-
