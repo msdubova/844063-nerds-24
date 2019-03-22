@@ -116,7 +116,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -149,6 +149,7 @@ a {
   margin: 0;
   padding: 16px 54px;
 
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   vertical-align: middle;
@@ -170,6 +171,7 @@ a {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: rgb(215, 55, 59);
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .container {
@@ -195,8 +197,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 
   background-color: inherit;
 }
@@ -222,16 +224,16 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 440px;
   margin: 0;
   margin-right: 60px;
@@ -247,16 +249,16 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   width: 300px;
   margin: 0;
   padding: 0;
@@ -371,44 +373,41 @@ a {
   z-index: 2;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 90px;
   height: 18px;
 }
 
 .slider-navigation-item {
+  position: relative;
+
   width: 18px;
   height: 18px;
 
+  font-size: 0;
+
   background-color: rgb(255, 255, 255);
-  border-radius: 50%;
+  border-radius: 50%;;
 }
 
 .main-slider input#slide-1:checked ~ div label[for="slide-1"]::before,
 .main-slider input#slide-2:checked ~ div label[for="slide-2"]::before,
 .main-slider input#slide-3:checked ~ div label[for="slide-3"]::before {
   content: "";
-  position: relative;
-  top: -50%;
+  position: absolute;
+  top: 50%;
   left: 50%;
 
-  display: inline-block;
-  width: 25%;
-  height: 25%;
-
-  vertical-align: middle;
+  width: 4px;
+  height: 4px;
 
   border: 2px solid rgb(194, 194, 194);
   border-radius: 50%;
-  -webkit-transform: translate(-50%, 25%);
-      -ms-transform: translate(-50%, 25%);
-          transform: translate(-50%, 25%);
+  transform: translate(-50%, -50%);
 }
 
 .main-slider input#slide-1:focus ~ div label[for="slide-1"],
@@ -509,6 +508,7 @@ a {
   padding: 0;
   padding-top: 78px;
 
+  font-weight: 500;
   font-size: 55px;
   line-height: 55px;
 }
@@ -520,6 +520,7 @@ a {
   padding: 0;
 
   line-height: 24px;
+  color: rgb(40, 49, 54);
 }
 
 .categories {
@@ -533,11 +534,12 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -552,14 +554,17 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 300px;
   margin: 0;
   margin-right: 100px;
   padding: 0;
 }
 
+.category-item:nth-of-type(3n) {
+  margin-right: auto;
+}
 .category-item img {
   margin: 0;
   margin-bottom: 26px;
@@ -634,11 +639,11 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 1160px;
   margin: 0 auto;
   padding: 0;
@@ -660,6 +665,7 @@ a {
   padding: 0;
   padding-top: 73px;
 
+  font-weight: 500;
   font-size: 45px;
   line-height: 45px;
 }
@@ -669,6 +675,8 @@ a {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
+
+  color: rgb(40, 49, 54);
 }
 
 .about-us b {
@@ -694,6 +702,8 @@ a {
   margin-bottom: 24px;
   padding: 0;
   padding-left: 35px;
+
+  color: rgb(40, 49, 54);
 }
 
 .features li::before {
@@ -742,6 +752,7 @@ a {
   padding-top: 2px;
   padding-bottom: 35px;
 
+  font-weight: 700;
   font-size: 45px;
   line-height: 10px;
 }
@@ -754,6 +765,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+  color: rgb(40, 49, 54);
 }
 
 .clients {
@@ -761,16 +773,11 @@ a {
 }
 
 .clients .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
   width: 1160px;
-  min-height: 184px;
   margin: 0 auto;
   padding: 0;
 
@@ -784,12 +791,13 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
   height: 100%;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -799,24 +807,28 @@ a {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -ms-flex-align: center;
+  align-items: flex-start;
+  box-sizing: border-box;
   width: 300px;
-  padding-top: 15px;
+  height: 180px;
+  margin: 0;
+  padding: 0;
 }
 
 .clients-item a {
   opacity: 0.2;
+}
+
+.clients-item img {
+  width: 100%;
+  height: 100%;
 }
 
 .clients-item a:hover,
@@ -829,20 +841,22 @@ a {
 }
 
 .clients-item:first-of-type,
-.clients-item:last-of-type {
+.clients-item:nth-of-type(5n),
+.clients-item:last-of-type,
+.clients-item:nth-of-type(4n) {
   width: 280px;
-  padding-top: 25px;
 }
 
-.clients-item:first-of-type {
+.clients-item:first-of-type,
+.clients-item:nth-of-type(5n) {
   padding-right: 20px;
 }
 
-.clients-item:last-of-type {
+.clients-item:nth-of-type(4n) {
   padding-left: 20px;
 }
 
-.clients-item:not(:last-of-type)::after {
+.clients-item:not(:last-of-type):not(:nth-of-type(4n))::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -861,13 +875,17 @@ a {
   font-size: 0;
 }
 
+.main-footer {
+  min-height: 416px;
+}
+
 .main-footer .container {
   position: relative;
 
   display: block;
   width: 1200px;
   height: 416px;
-  height: 416px;
+  min-height: 416px;
   margin: 0 auto;
   margin-bottom: 68px;
   padding: 0;
@@ -892,10 +910,9 @@ a {
   z-index: 2;
 
   -webkit-box-sizing: border-box;
-
           box-sizing: border-box;
   width: 320px;
-  height: 310px;
+  min-height: 310px;
   padding: 50px;
 
   background-color: rgb(255, 255, 255);
@@ -905,6 +922,10 @@ a {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .adress-block p {
@@ -913,7 +934,9 @@ a {
   padding: 0;
 
   font-weight: 400;
+  font-size: 16px;
   line-height: 18px;
+  color: rgb(102, 102, 102);
 }
 
 .adress-block .button {
@@ -931,8 +954,8 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   width: 1160px;
   margin: 0 auto;
   margin-bottom: 45px;
@@ -945,16 +968,16 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 260px;
@@ -991,6 +1014,7 @@ a {
 
 .footer-social-item a:active {
   background-color: rgb(215, 55, 59);
+  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .vkontakte a:active::after,
@@ -999,7 +1023,7 @@ a {
   opacity: 0.3;
 }
 
- .vkontakte a::after {
+.vkontakte a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1071,6 +1095,11 @@ a {
 
 .footer-slogan span {
   margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(68, 68, 68);
 }
 
 .main-header h1 {
@@ -1103,11 +1132,11 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 0 20px;
 }
 .catalog .main-header {
@@ -1124,8 +1153,8 @@ aside fieldset {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   margin: 0;
   padding: 0;
 
@@ -1150,18 +1179,22 @@ fieldset legend {
 
   font-weight: 700;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 30px;
   text-transform: uppercase;
-  letter-spacing: 0.001em;
+  letter-spacing: 0.2px;
 }
 
 fieldset label {
   position: relative;
 
-  margin-bottom: 10px;
+  display: block;
+  margin-bottom: 15px;
   padding-left: 35px;
 
   font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(40, 49, 54);
 }
 
 .range-filter {
@@ -1226,8 +1259,8 @@ fieldset label {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   width: 100%;
 }
 
@@ -1236,7 +1269,10 @@ fieldset label {
   margin-bottom: 0;
   padding: 0;
 
+  font-weight: 400;
   font-size: 16px;
+  line-height: 22px;
+  color: rgb(40, 49, 54);
   text-transform: uppercase;
 }
 
@@ -1245,7 +1281,9 @@ fieldset label {
   margin-left: 10px;
   padding: 8px 10px;
 
+  font-weight: 400;
   font-size: 16px;
+  line-height: 22px;
   font-family: "Roboto", "Arial", sans-serif;
   text-align: center;
   color: rgb(40, 49, 54);
@@ -1352,7 +1390,7 @@ aside button {
 }
 
 aside .button {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: rgb(0, 0, 0);
@@ -1391,8 +1429,8 @@ aside .button:active {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   margin-bottom: 50px;
 }
 
@@ -1402,8 +1440,9 @@ aside .button:active {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -1415,7 +1454,7 @@ aside .button:active {
 
   font-weight: 700;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 18px;
   text-transform: uppercase;
   letter-spacing: 0.001em;
 }
@@ -1443,6 +1482,7 @@ aside .button:active {
 }
 
 .sortings .sort-type {
+  max-width: 300px;
   margin-right: 45px;
 }
 
@@ -1450,11 +1490,11 @@ aside .button:active {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  padding-top: 2px;
 }
 
 .sort-type li:not(:last-of-type) {
   margin-right: 25px;
-  padding-top: 2px;
 }
 
 .sortings .sort-order {
@@ -1462,9 +1502,10 @@ aside .button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 45px;
+  max-height: 20px;
 }
 
 .sort-order li {
@@ -1511,8 +1552,8 @@ aside .button:active {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 26px;
@@ -1522,6 +1563,7 @@ aside .button:active {
   position: relative;
 
   max-width: 360px;
+  max-height: 576px;
   margin-bottom: 24px;
   padding-top: 40px;
 }
@@ -1536,17 +1578,15 @@ aside .button:active {
   z-index: 2;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -1584,7 +1624,13 @@ aside .button:active {
 }
 
 .project-name a {
+  max-width: 176px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
   color: rgb(0, 0, 0);
+  word-wrap: break-word;
 }
 
 .catalog-item b {
@@ -1595,8 +1641,10 @@ aside .button:active {
   overflow: auto;
 
   font-weight: 400;
+  font-size: 16px;
   line-height: 18px;
   text-align: center;
+  color: rgb(102, 102, 102);
 }
 
 .catalog-item .button {
@@ -1605,8 +1653,24 @@ aside .button:active {
   width: 200px;
 }
 
+.catalog-item .button:active {
+  color: rgb(255, 255, 255);
+}
+.catalog-item:hover {
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
 .catalog-item .hidden {
+  position: absolute;
+  bottom: 0;
+
   display: none;
+  width: 100%;
+  height: 231px;
+}
+
+.catalog-item:hover .hidden {
+  display: flex;
 }
 
 .catalog-item:hover:before,
@@ -1635,8 +1699,8 @@ aside .button:active {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
@@ -1648,16 +1712,19 @@ aside .button:active {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
   height: 100%;
 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
 }
@@ -1667,11 +1734,11 @@ aside .button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-width: 50px;
@@ -1723,9 +1790,9 @@ aside .button:active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 960px;
-  height: 590px;
+  min-height: 590px;
   margin: 0;
-  padding: 70px 100px;
+  padding: 70px 100px 0 100px;
 
   background-color: white;
   -webkit-box-shadow: 0 20px  40px 0  rgba(0, 0, 0, 0.75) ;
@@ -1739,7 +1806,6 @@ aside .button:active {
   display: block;
 
   -webkit-animation-name: bounce;
-
           animation-name: bounce;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
@@ -1781,14 +1847,17 @@ aside .button:active {
   border: none;
 }
 
+.modal .button {
+  margin-bottom: 84px;
+}
 .modal form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -1799,6 +1868,7 @@ aside .button:active {
   margin-bottom: 30px;
   padding: 0;
 
+  font-weight: 500;
   font-size: 45px;
   line-height: 45px;
 }
@@ -1809,11 +1879,12 @@ aside .button:active {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
@@ -1825,8 +1896,8 @@ aside .button:active {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 360px;
   margin: 0;
   margin-bottom: 5px;
@@ -1841,19 +1912,52 @@ aside .button:active {
   padding: 14px;
 
   font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.5);
 
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  border: 2px solid rgb(215, 220, 222);
   border-radius: 3px;
+}
+
+.user-info input:hover {
+  border-color: rgb(180, 185, 187);
+  outline: none;
+}
+
+.user-info input:focus {
+  color: rgb(68, 68, 68);
+
+  border-color: rgb(0, 0, 0);
+  outline: none;
+}
+
+.user-info input:focus::placeholder {
+  color: rgb(68, 68, 68);
+}
+
+.user-info input:invalid {
+  color: rgb(231, 66, 70);
+
+  border-color: rgb(231, 66, 70);
+}
+
+.user-info input:invalid::placeholder {
+  color: rgb(231, 66, 70);
 }
 
 .modal label {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   padding: 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 label[for="letter"] {
-  margin-bottom: 0;
+  margin-bottom: 12px;
 }
 
 .modal textarea {
@@ -1865,12 +1969,41 @@ label[for="letter"] {
   padding: 0;
   padding: 14px;
 
-  color: rgba( 0, 0, 0, 0.3);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgba(68, 68, 68, 0.5);
 
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  border: 2px solid rgb(215, 220, 222);
   border-radius: 3px;
+}
+
+.modal textarea:hover {
+  border-color: rgb(180, 185, 187);
+}
+
+.modal textarea:focus {
+  color: rgb(68, 68, 68);
+
+  border-color: rgb(0, 0, 0);
+  outline: none;
+}
+
+.modal textarea:invalid {
+  color: rgb(231, 66, 70);
+
+  border-color: rgb(231, 66, 70);
 }
 
 .modal .button {
   width: 260px;
+}
+
+.modal input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgba(68, 68, 68, 0.5);
 }

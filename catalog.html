@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/min.style.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body class="catalog">
     <header class="main-header">
@@ -40,45 +40,47 @@
     </header>
     <main class="container inner-container">
       <aside>
-        <fieldset class="field-range">
-          <legend>Стоимость:</legend>
-          <div class="range-filter">
-            <div class="range-controls">
-              <div class="scale">
-                <div class="bar"></div>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="field-range">
+            <legend>Стоимость:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
               </div>
-              <div class="toggle toggle-min"></div>
-              <div class="toggle toggle-max"></div>
+              <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+              </div>
             </div>
-            <div class="price-controls">
-              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
-              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="field-radio">
-          <legend>Сетка:</legend>
-          <input class="visually-hidden" type="radio" name="grid" id="adoptive" checked>
-          <label for="adoptive">Адаптивная</label>
-          <input class="visually-hidden" type="radio" name="grid" id="fix">
-          <label for="fix">Фиксированная</label>
-          <input class="visually-hidden" type="radio" name="grid" id="responsive">
-          <label for="responsive">Резиновая</label>
-        </fieldset>
-        <fieldset class="field-check">
-          <legend>Особенности:</legend>
-          <input class="visually-hidden" type="checkbox" id="check-slider" name="slider" checked>
-          <label for="check-slider">Слайдер</label>
-          <input class="visually-hidden" type="checkbox" id="check-features" name="features">
-          <label for="check-features">Блок преимуществ</label>
-          <input class="visually-hidden" type="checkbox" id="check-news" name="news" checked>
-          <label for="check-news">Новости</label>
-          <input class="visually-hidden" type="checkbox" id="check-gallery" name="gallery">
-          <label for="check-gallery">Галерея</label>
-          <input class="visually-hidden" type="checkbox" id="check-cart" name="cart">
-          <label for="check-cart">Корзина</label>
-        </fieldset>
-        <button class="button" type="submit">Показать</button>
+          </fieldset>
+          <fieldset class="field-radio">
+            <legend>Сетка:</legend>
+            <input class="visually-hidden" type="radio" name="grid" id="adoptive" checked>
+            <label for="adoptive">Адаптивная</label>
+            <input class="visually-hidden" type="radio" name="grid" id="fix">
+            <label for="fix">Фиксированная</label>
+            <input class="visually-hidden" type="radio" name="grid" id="responsive">
+            <label for="responsive">Резиновая</label>
+          </fieldset>
+          <fieldset class="field-check">
+            <legend>Особенности:</legend>
+            <input class="visually-hidden" type="checkbox" id="check-slider" name="slider" checked>
+            <label for="check-slider">Слайдер</label>
+            <input class="visually-hidden" type="checkbox" id="check-features" name="features">
+            <label for="check-features">Блок преимуществ</label>
+            <input class="visually-hidden" type="checkbox" id="check-news" name="news" checked>
+            <label for="check-news">Новости</label>
+            <input class="visually-hidden" type="checkbox" id="check-gallery" name="gallery">
+            <label for="check-gallery">Галерея</label>
+            <input class="visually-hidden" type="checkbox" id="check-cart" name="cart">
+            <label for="check-cart">Корзина</label>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
       </aside>
       <section class="inner-catalog">
         <h2 class="visually-hidden">Каталог</h2>
