@@ -875,60 +875,62 @@ a {
   font-size: 0;
 }
 
-.main-footer {
-  min-height: 416px;
-}
-
-.main-footer .container {
+.location {
   position: relative;
 
-  display: block;
-  width: 1200px;
-  height: 416px;
-  min-height: 416px;
-  margin: 0 auto;
-  margin-bottom: 68px;
-  padding: 0;
-
+  box-sizing: border-box;
+  min-height: 415px;
+  margin-bottom: 70px;
+  padding: 53px 0;  background-image: url("../img/content/map.jpg");
   background-color: rgb(233, 229, 220);
-  background-image: url("../img/content/map.jpg");
 }
 
-.main-footer iframe {
+.location .container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+.location .contacts {
+  position: relative;
   z-index: 1;
 
-  width: 100%;
-  height: 416px;
-
-  positioN: absolute;
-}
-
-.adress-block {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  z-index: 2;
-
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 320px;
-  min-height: 310px;
   padding: 50px;
 
   background-color: rgb(255, 255, 255);
 }
 
-.adress-block h3 {
+.location iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+
+.main-footer {
+
+}
+
+
+.location h3 {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding: 0;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
-.adress-block p {
+.location p {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -939,13 +941,13 @@ a {
   color: rgb(102, 102, 102);
 }
 
-.adress-block .button {
+.location .button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 219px;
   margin: 0;
-  margin-top: 15px;
-  padding: 17px 0;
+  margin-top: 18px;
+  padding: 16px 0;
 }
 
 .social-container {
@@ -956,10 +958,11 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
       flex-direction: row;
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
   margin-bottom: 45px;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .footer-social {
@@ -1086,7 +1089,7 @@ a {
 .footer-slogan b {
   display: block;
   margin-bottom: 7px;
-  padding-top: 7px;
+padding-top: 4px;
 
   font-weight: 700;
   font-size: 36px;
