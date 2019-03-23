@@ -160,7 +160,7 @@ a {
   word-wrap: break-word;
 
   background-color: rgb(251, 86, 90);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .button:hover,
@@ -379,7 +379,7 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 90px;
+  width: 88px;
   height: 18px;
 }
 
@@ -474,7 +474,7 @@ a {
 .slider-item.second::after {
   content: "";
   position: absolute;
-  right: 30px;
+  right: -35px;
   bottom: -80px;
   z-index: 1;
 
@@ -488,7 +488,7 @@ a {
 .slider-item.third::after {
   content: "";
   position: absolute;
-  right: 30px;
+  right: 0;
   bottom: -80px;
   z-index: 1;
 
@@ -882,15 +882,16 @@ a {
   box-sizing: border-box;
   min-height: 415px;
   margin-bottom: 70px;
-  padding: 53px 0;  background-image: url("../img/content/map.jpg");
+  padding: 53px 0;
+
   background-color: rgb(233, 229, 220);
+  background-image: url("../img/content/map.jpg");
 }
 
 .location .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-
 }
 
 .location .contacts {
@@ -898,8 +899,9 @@ a {
   z-index: 1;
 
   box-sizing: border-box;
-  width: 320px;
-  padding: 50px;
+  width: 319px;
+  min-height: 308px;
+  padding: 48px 50px;
 
   background-color: rgb(255, 255, 255);
 }
@@ -915,14 +917,9 @@ a {
   border: none;
 }
 
-.main-footer {
-
-}
-
-
 .location h3 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 0;
 
   font-weight: 700;
@@ -947,7 +944,7 @@ a {
           box-sizing: border-box;
   width: 219px;
   margin: 0;
-  margin-top: 18px;
+  margin-top: 15px;
   padding: 16px 0;
 }
 
@@ -959,11 +956,11 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
       flex-direction: row;
+  box-sizing: border-box;
   width: 1200px;
   margin: 0 auto;
   margin-bottom: 45px;
   padding: 0 20px;
-  box-sizing: border-box;
 }
 
 .footer-social {
@@ -1090,7 +1087,7 @@ a {
 .footer-slogan b {
   display: block;
   margin-bottom: 7px;
-padding-top: 4px;
+  padding-top: 4px;
 
   font-weight: 700;
   font-size: 36px;
@@ -1110,7 +1107,7 @@ padding-top: 4px;
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-top: 78px;
+  padding-top: 75px;
 
   font-weight: 500;
   font-size: 55px;
@@ -1143,8 +1140,9 @@ padding-top: 4px;
   justify-content: space-between;
   padding: 0 20px;
 }
+
 .catalog .main-header {
-  margin-bottom: 58px;
+  margin-bottom: 55px;
 }
 
 .container aside {
@@ -1166,15 +1164,15 @@ aside fieldset {
 }
 
 .field-range {
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 .field-radio {
-  margin-bottom: 34px;
+  margin-bottom: 25px;
 }
 
 .field-check {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 fieldset legend {
@@ -1192,7 +1190,7 @@ fieldset label {
   position: relative;
 
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding-left: 35px;
 
   font-weight: 400;
@@ -1203,7 +1201,7 @@ fieldset label {
 
 .range-filter {
   width: 260px;
-  margin-top: 35px;
+  margin-top: 33px;
 }
 
 .range-controls {
@@ -1216,7 +1214,7 @@ fieldset label {
   padding-left: 20px;
 
   background-color: rgb(241, 241, 241);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .range-controls .scale {
@@ -1435,7 +1433,8 @@ aside .button:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
       flex-direction: row;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
+  padding-top: 5px;
 }
 
 .sortings ul {
@@ -1494,7 +1493,6 @@ aside .button:active {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding-top: 2px;
 }
 
 .sort-type li:not(:last-of-type) {
@@ -1568,8 +1566,15 @@ aside .button:active {
 
   max-width: 360px;
   max-height: 576px;
-  margin-bottom: 24px;
+  margin-bottom: 33px;
   padding-top: 40px;
+
+  border-radius: 5px;
+}
+
+.catalog-item .item {
+  display: block;
+  height: 576px;
 }
 
 .catalog-item:not(:nth-of-type(2n)) {
@@ -1578,7 +1583,7 @@ aside .button:active {
 
 .catalog-item .info {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   z-index: 2;
 
   display: -webkit-box;
@@ -1588,17 +1593,29 @@ aside .button:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
       flex-direction: column;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
-  min-height: 230px;
-  max-height: 575px;
-  padding-bottom: 40px;
+  min-height: 231px;
+  max-height: 576px;
+  padding-top: 26px;
+  padding-bottom: 35px;
 
   background-color: rgb(238, 238, 238);
+}
+
+.catalog-item:nth-of-type(3) .info,
+.catalog-item:nth-of-type(4) .info {
+  bottom: -5px;
+}
+
+.catalog-item .hidden {
+  display: none;
 }
 
 .catalog-item:before {
@@ -1615,22 +1632,21 @@ aside .button:active {
 }
 
 .catalog-item h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 176px;
+  min-height: 30px;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   padding: 0;
-  padding-top: 30px;
+  overflow: auto;
 
   font-weight: 700;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 30px;
   text-transform: uppercase;
   letter-spacing: 0.001em;
-  width: 176px;
-  min-height: 30px;
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
 }
 
 .project-name a {
@@ -1643,11 +1659,21 @@ aside .button:active {
   word-wrap: break-word;
 }
 
+.catalog-item:nth-of-type(2) b {
+  width: 230px;
+}
+
+.catalog-item:nth-of-type(1) b,
+.catalog-item:nth-of-type(3) b,
+.catalog-item:nth-of-type(4) b {
+  width: 180px;
+}
+
 .catalog-item b {
-  width: 200px;
+  width: 215px;
   min-height: 60px;
   max-height: 800px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   overflow: auto;
 
   font-weight: 400;
@@ -1666,18 +1692,9 @@ aside .button:active {
 .catalog-item .button:active {
   color: rgb(255, 255, 255);
 }
+
 .catalog-item:hover {
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
-}
-
-.catalog-item .hidden {
-  position: absolute;
-  bottom: 0;
-
-  display: none;
-  width: 100%;
-  height: 231px;
-
 }
 
 .catalog-item:hover .hidden {
@@ -1715,7 +1732,7 @@ aside .button:active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .pagination a {
@@ -1760,7 +1777,7 @@ aside .button:active {
   padding: 0;
 
   background-color: rgb(238, 238, 238);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .pagination-item:last-of-type {
@@ -1856,11 +1873,13 @@ aside .button:active {
 
 .modal button {
   border: none;
+  cursor: pointer;
 }
 
 .modal .button {
   margin-bottom: 84px;
 }
+
 .modal form {
   display: -webkit-box;
   display: -ms-flexbox;
