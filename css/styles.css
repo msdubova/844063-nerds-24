@@ -172,7 +172,8 @@ a {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: rgb(215, 55, 59);
-  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+  -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+          box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .container {
@@ -408,7 +409,9 @@ a {
 
   border: 2px solid rgb(194, 194, 194);
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .main-slider input#slide-1:focus ~ div label[for="slide-1"],
@@ -537,7 +540,8 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
       flex-direction: row;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -774,10 +778,17 @@ a {
 }
 
 .clients .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  box-sizing: border-box;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 1160px;
   margin: 0 auto;
   padding: 0;
@@ -816,7 +827,8 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: flex-start;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 300px;
   height: 180px;
   margin: 0;
@@ -879,7 +891,9 @@ a {
 .location {
   position: relative;
 
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+          box-sizing: border-box;
   min-height: 415px;
   margin-bottom: 70px;
   padding: 53px 0;
@@ -898,7 +912,9 @@ a {
   position: relative;
   z-index: 1;
 
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+          box-sizing: border-box;
   width: 319px;
   min-height: 308px;
   padding: 48px 50px;
@@ -956,7 +972,8 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
       flex-direction: row;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 1200px;
   margin: 0 auto;
   margin-bottom: 45px;
@@ -1015,7 +1032,8 @@ a {
 
 .footer-social-item a:active {
   background-color: rgb(215, 55, 59);
-  box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+  -webkit-box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
+          box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
 .vkontakte a:active::after,
@@ -1445,7 +1463,8 @@ aside .button:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
       flex-direction: row;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -1593,7 +1612,9 @@ aside .button:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
       flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1632,9 +1653,15 @@ aside .button:active {
 }
 
 .catalog-item h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 176px;
   min-height: 30px;
   margin: 0;
@@ -1694,10 +1721,13 @@ aside .button:active {
 }
 
 .catalog-item:hover {
-  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
 .catalog-item:hover .hidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1911,7 +1941,8 @@ aside .button:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
       flex-direction: row;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1962,6 +1993,18 @@ aside .button:active {
   outline: none;
 }
 
+.user-info input:focus::-webkit-input-placeholder {
+  color: rgb(68, 68, 68);
+}
+
+.user-info input:focus:-ms-input-placeholder {
+  color: rgb(68, 68, 68);
+}
+
+.user-info input:focus::-ms-input-placeholder {
+  color: rgb(68, 68, 68);
+}
+
 .user-info input:focus::placeholder {
   color: rgb(68, 68, 68);
 }
@@ -1970,6 +2013,18 @@ aside .button:active {
   color: rgb(231, 66, 70);
 
   border-color: rgb(231, 66, 70);
+}
+
+.user-info input:invalid::-webkit-input-placeholder {
+  color: rgb(231, 66, 70);
+}
+
+.user-info input:invalid:-ms-input-placeholder {
+  color: rgb(231, 66, 70);
+}
+
+.user-info input:invalid::-ms-input-placeholder {
+  color: rgb(231, 66, 70);
 }
 
 .user-info input:invalid::placeholder {
@@ -2028,6 +2083,30 @@ label[for="letter"] {
 
 .modal .button {
   width: 260px;
+}
+
+.modal input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.modal input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.modal input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgba(68, 68, 68, 0.5);
 }
 
 .modal input::placeholder {
