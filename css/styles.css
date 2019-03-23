@@ -113,6 +113,7 @@
 }
 
 body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
 
@@ -1624,6 +1625,12 @@ aside .button:active {
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.001em;
+  width: 176px;
+  min-height: 30px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 .project-name a {
@@ -1670,6 +1677,7 @@ aside .button:active {
   display: none;
   width: 100%;
   height: 231px;
+
 }
 
 .catalog-item:hover .hidden {
